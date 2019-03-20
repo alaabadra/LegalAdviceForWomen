@@ -1,10 +1,13 @@
 const router = require('express').Router();
 const home = require('./home');
-const {validation} = require('./middleware/validation.js');
-const {cookie} = require('./middleware/cookie.js');
-const {auth} = require('./middleware/authuntication.js');
+const {signupValidation,loginValidation} = require('./middleware/validation.js');
+const {verifyBeforeSignup} = require('./middleware/verifyBeforeSignup.js');
 const {hashPasword} = require('./middleware/hashPassword.js');
+const {isUser,isConsultant,isUserLoginin,isConsLogin} = require('./middleware/isFound');
+const addUserSignup = require('./middleware/addUserSignup.js')
 router.get('/', home.get);
-// router.post('/signup',validation,token,auth,hashPasword)
-
+router.post('/signup',signupValidation,verifyBeforeSignup,isUser,isConsultant,hashPasword,addUserSignup)
+router.post('/login',loginValidation,isUserLoginin,isConsLogin);
 module.exports = router;
+
+
