@@ -1,5 +1,5 @@
 const express = require('express');
-const hbs = require('express-handlebars');
+const exphbs = require('express-handlebars');
 const { join } = require('path');
 const bodyparser = require('body-parser');
 const cookieparser=require('cookie-parser')
@@ -9,15 +9,15 @@ const favicon = require('serve-favicon');
 //instanse of express
 const app = express();
 //set views
-app.set('views', join(__dirname, "view"));
+app.set('views', join(__dirname, "views"));
 app.set('view engine', 'hbs');
 
 app.engine(
     'hbs',
-    hbs({
+    exphbs({
         extname: 'hbs',
-        layoutsDir: join(__dirname, 'view', "layout"),
-        partialsDir: join(__dirname, 'view',"partial"),
+        layoutsDir: join(__dirname, 'views', "layouts"),
+        partialsDir: join(__dirname, 'views',"partials"),
         defaultLayout:"main"
     })
 )
