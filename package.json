@@ -23,12 +23,14 @@
   },
   "homepage": "https://github.com/alaabadra/LegalAdviceForWomen#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
     "cookie-parser": "^1.4.4",
     "dotenv": "^7.0.0",
     "env2": "^2.2.2",
     "express": "^4.16.4",
     "express-handlebars": "^3.0.2",
+    "jsonwebtoken": "^8.5.1",
     "pg": "^7.9.0",
     "serve-favicon": "^2.5.0"
   },
