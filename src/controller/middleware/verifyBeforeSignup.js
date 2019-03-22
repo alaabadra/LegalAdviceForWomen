@@ -15,7 +15,9 @@ exports.verifyBeforeSignup = (req,res,next)=>{//verify before sign up to sure th
             }
         })
     }else{//this person is allowing sign up
-        res.render('home');
+        res.render('home',{
+            msg:'now here you can sign up '
+        });
         next();
 
     }

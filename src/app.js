@@ -4,7 +4,7 @@ const { join } = require('path');
 const bodyparser = require('body-parser');
 const cookieparser=require('cookie-parser')
 const controller= require('./controller');
-const favicon = require('serve-favicon');
+// const favicon = require('serve-favicon');
 ///////////////////////////////////////////
 //instanse of express
 const app = express();
@@ -30,7 +30,7 @@ app.use(cookieparser())
 //use public
 app.use(express.static(join(__dirname,"..","public")));
 //favicon
-app.use(favicon(join(__dirname, '..', 'public','img' ,'logo.svg')));
+// app.use(favicon(join(__dirname, '..', 'public','img' ,'logo.svg')));
 //use controller
 app.use(controller)
 //set port

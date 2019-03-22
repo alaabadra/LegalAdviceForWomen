@@ -23,5 +23,5 @@ CREATE TABLE posts(
     answer TEXT
 );
 INSERT INTO users(user_name,password) VALUES ('nour','123'),('deema','1234'),('aseel','12345');
-INSERT INTO consultant(full_name,user_name,password) VALUES ('Dena Moeen','dena','111'),('Alaa Badra','alaa','222'),('Ayman Al-Quqa','ayman','333'),('Nareman Hellis','nareman','444');
+INSERT INTO consultant(full_name,user_name,password) VALUES ('Dena Moeen','dena','111'),('Alaa Badra','alaa','22222'),('Ayman Al-Quqa','ayman','333'),('Nareman Hellis','nareman','444');
 COMMIT;
