@@ -29,7 +29,7 @@ if(password.trim !== confirmPassword.trim()){
 }
 
 }
-exports.signupValidation = (req,res)=>{
+exports.signinValidation = (req,res)=>{
     const { userName,password }= req.body;
 if(!userName.trim() || ! password.trim() ){
     res.render('home',{

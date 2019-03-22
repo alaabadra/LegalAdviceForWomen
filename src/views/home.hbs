@@ -2,11 +2,11 @@
 <section >
     <div class="signup">
     <span class="title">إنشاء حساب جديد</span>
-    <form class="signup-form">
-    <input class="input" type="text" name="firstname" placeholder="اسم المستخدم" required autocomplete="off">
-    <input class="input" type="password" name="password" placeholder="كلمة المرور" required autocomplete="off">
-    <input class="input" type="password" name="confirmPassword" placeholder="تأكيد كلمة المرور" required autocomplete="off">
-    <span class="msg">{{msg}}</span>
+    <form class="signup-form" method="POST">
+    <input class="inputUserName" type="text" name="username" placeholder="username" required autocomplete="off">
+    <input class="inputPassword" type="password" name="password" placeholder="password" required autocomplete="off">
+    <input class="inputConfirmPassword" type="password" name="confirmPassword" placeholder="confirmPassword" required autocomplete="off">
+    <span class="msg"><h2>{{msg}}</h2></span>
     <input type="submit" name="submit" value="أنشئ" class="submit-btn">
 </form>
 </div>
