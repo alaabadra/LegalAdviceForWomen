@@ -1,0 +1,19 @@
+<section>
+    <div class="container"> <h1> My Questions</h1>
+        <div >
+            <ul class="question">
+                <li>
+                    {{#each resultPost}}
+                    <h2 class="title"><title>title Question</title> <br>{{this.title}}</h2> 
+                    <h2 class="subject">subject the Question <br>{{this.content}}</h2>
+                    <h2 class="answer">Answer <br>{{this.answer}}</h2>
+                    {{/each}}
+               
+                </li>
+                
+            </ul>
+          
+        </div>
+
+    </div>
+</section>
