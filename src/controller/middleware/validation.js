@@ -55,3 +55,18 @@ if(password.length()<5||password.length()>10){
 
 
 }
+
+exports.userQInValidation=(req,res)=>{
+    const {writeTitle,writeSubject}= req.body;
+    if(!writeTitle.trim()|| ! writeSubject.trim()){
+        res.render('userQIn',{
+            msg:'you must fill all fields'
+        });
+
+    }
+    if(writeTitle.length()>15){
+        res.render('userQIn',{
+            msg:'you must length title on more 15'
+        });
+    }
+}
