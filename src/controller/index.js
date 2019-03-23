@@ -7,7 +7,7 @@ const {isUser,isConsultant,isUserLoginin,isConsLogin} = require('./middleware/is
 const {addUserSignup} = require('./middleware/addUserSignup.js')
 router.get('/', home.get);
 router.post('/signup',signupValidation,verifyBeforeSignup,isUser,isConsultant,hashPassword,addUserSignup)
-// router.post('/login',loginValidation,isUserLoginin,isConsLogin);
+router.post('/login',loginValidation,isUserLoginin,isConsLogin);
 module.exports = router;
 
 
