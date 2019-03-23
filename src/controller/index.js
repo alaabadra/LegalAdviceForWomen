@@ -10,6 +10,7 @@ const {get} = require('./user/userMyProfile');
 const {get} =require('./user/userPrevQ.js');
 const {get,post} = require('./user/userQIn.js');
 const {get} = require('./consultant/consProfile.js');
+const {get,post} = require('./consultant/consQuserAnsIn.js');
 router.get('/', home.get);
 router.post('/signup',signupValidation,verifyBeforeSignup,isUser,isConsultant,hashPassword,addUserSignup)
 router.post('/login',loginValidation,isUserLoginin,isConsLogin);
@@ -18,6 +19,8 @@ router.get('/userPrevQ',get)
 router.post('/userQIn',get,userQInValidation,post)
 router.get('/userMyProfile',get);
 router.get('/consProfile',get);
+router.get('/consQuserAnsIn',get,post);
+
 module.exports = router;
 
 
