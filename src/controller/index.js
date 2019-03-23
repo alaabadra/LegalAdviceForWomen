@@ -8,7 +8,8 @@ const {addUserSignup} = require('./middleware/addUserSignup.js');
 const {get} = require('./user/homeUser.js');
 const {get} = require('./user/userMyProfile');
 const {get} =require('./user/userPrevQ.js');
-const {get,post} = require('./user/userQIn.js')
+const {get,post} = require('./user/userQIn.js');
+const {get} = require('./consultant/consProfile.js');
 router.get('/', home.get);
 router.post('/signup',signupValidation,verifyBeforeSignup,isUser,isConsultant,hashPassword,addUserSignup)
 router.post('/login',loginValidation,isUserLoginin,isConsLogin);
@@ -16,6 +17,7 @@ router.get('/homeUser',get);
 router.get('/userPrevQ',get)
 router.post('/userQIn',get,userQInValidation,post)
 router.get('/userMyProfile',get);
+router.get('/consProfile',get);
 module.exports = router;
 
 
