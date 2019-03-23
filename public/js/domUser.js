@@ -2,6 +2,7 @@ const btnSubmitUser = document.getElementById('btnSubmit');
 const title = document.getElementById('title');
 const  subject = document.getElementById('subject');
 const msg = document.querySelector('.msg');
+
 btnSubmitUser.addEventListener('click',event=>{
     event.preventDefault();
    const sendData = {
