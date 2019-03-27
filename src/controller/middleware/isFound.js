@@ -24,7 +24,7 @@ exports.isConsultant = (req,res)=>{
     }).catch(err=>error.server(err,req,res,null))
 }
 exports.isUserLoginin=(req,res,next)=>{
-    getUser(req.body.userName).then(result=>{
+    getUser(req.body.Name).then(result=>{
         if(result.rows[0]){
             userInfo={
                 userId:res.rows[0],
@@ -48,7 +48,7 @@ exports.isUserLoginin=(req,res,next)=>{
     }).catch(err=>error.server(err,req,res,null))
 }
 exports.isConsLogin = (req,res)=>{
-    getCons(req.body.userName).then(result=>{
+    getCons(req.body.Name).then(result=>{
         if(result.rows[0]){
             userInfo={
                 userId:res.rows[0],

@@ -10,7 +10,8 @@ exports.get=(req,res)=>{
             getPosts().then(result=>{
                 if(result.rows){
                      res.render('consAnsIn',{
-                title:result.rows[0].title
+                title:result.rows[0].title,
+                content: result.rows[0].content
             });  
                 }
                 
@@ -24,9 +25,9 @@ exports.post = (req,res)=>{
     const {writeAnsCosn}=req.body;
     addAns(writeAnsCosn).then(result=>{
         if(result.rows[0]){
-            return res.send('add your Answer successfully')
+            return res.send({msg:'add your Answer successfully'})
         }else{
-            res.send('dont add successfully , please try agin add')
+            res.send({msg:'dont add successfully , please try again add'})
         }
     }).catch(err=>error.server(err));
 }

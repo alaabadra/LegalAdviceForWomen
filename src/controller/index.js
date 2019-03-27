@@ -5,21 +5,22 @@ const {verifyBeforeSignup} = require('./middleware/verifyBeforeSignup.js');
 const {hashPassword} = require('./middleware/hashPassword.js');
 const {isUser,isConsultant,isUserLoginin,isConsLogin} = require('./middleware/isFound');
 const {addUserSignup} = require('./middleware/addUserSignup.js');
-const {get} = require('./user/homeUser.js');
-const {get} = require('./user/userMyProfile');
-const {get} =require('./user/userPrevQ.js');
-const {get,post} = require('./user/userQIn.js');
-const {get} = require('./consultant/consProfile.js');
-const {get,post} = require('./consultant/consQuserAnsIn.js');
+const homeUser = require('./user/homeUser.js');
+ const userMyProfile = require('./user/userMyProfile');
+// const {get} = require('./user/userMyProfile');
+const userPrevQ=require('./user/userPrevQ.js');
+const userQIn = require('./user/userQIn.js');
+const consProfile= require('./consultant/consProfile.js');
+const consQuserAnsIn= require('./consultant/consQuserAnsIn.js');
 router.get('/', home.get);
 router.post('/signup',signupValidation,verifyBeforeSignup,isUser,isConsultant,hashPassword,addUserSignup)
-router.post('/login',loginValidation,isUserLoginin,isConsLogin);
-router.get('/homeUser',get);
-router.get('/userPrevQ',get)
-router.post('/userQIn',get,userQInValidation,post)
-router.get('/userMyProfile',get);
-router.get('/consProfile',get);
-router.get('/consQuserAnsIn',get,post);
+// router.post('/login',loginValidation,isUserLoginin,isConsLogin);
+// router.get('/homeUser',homeUser.get);
+// router.get('/userPrevQ',userPrevQ.get)
+// router.post('/userQIn',userQIn.get,userQInValidation,userQIn.post)
+// router.get('/userMyProfile',userMyProfile.get);
+// router.get('/consProfile',consProfile.get);
+// router.get('/consQuserAnsIn',consQuserAnsIn.get,consQuserAnsIn.post);
 
 module.exports = router;
 
