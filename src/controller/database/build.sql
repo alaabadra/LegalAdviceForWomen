@@ -22,6 +22,6 @@ CREATE TABLE posts(
     consultant_id INTEGER REFERENCES consultant(id),
     answer TEXT
 );
-INSERT INTO users(user_name,password) VALUES ('nour','123'),('deema','1234'),('aseel','12345');
-INSERT INTO consultant(full_name,user_name,password) VALUES ('Dena Moeen','dena','111'),('Alaa Badra','alaa','22222'),('Ayman Al-Quqa','ayman','333'),('Nareman Hellis','nareman','444');
+INSERT INTO users(user_name,password) VALUES ('nour','12311'),('deema','12344'),('aseel','12345');
+INSERT INTO consultant(full_name,user_name,password) VALUES ('Deema Badra','deema','11111'),('Alaa Badra','alaa','22222'),('Ahmad Badra','ahmad','33333'),('Mohammed Badra','mohammed','44444');
 COMMIT;

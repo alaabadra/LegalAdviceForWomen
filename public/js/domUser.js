@@ -14,9 +14,9 @@ btnSubmitUser.addEventListener('click',event=>{
         body:JSON.stringify(sendData)
     }),(err,result)=>{
         if(err) return new TypeError(err);
-        else{
-            return msg.textContent = result;
-        }
+        // else{
+        //     return msg.textContent = result;
+        // }
     }
 
 });

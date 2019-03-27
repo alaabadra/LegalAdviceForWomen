@@ -30,7 +30,7 @@ app.use(cookieparser())
 //use public
 app.use(express.static(join(__dirname,"..","public")));
 //favicon
-// app.use(favicon(join(__dirname, '..', 'public','img' ,'logo.svg')));
+// app.use(favicon(join(__dirname, '..', 'public','img' ,'logoo.png')));
 //use controller
 app.use(controller)
 //set port
